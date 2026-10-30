@@ -1,13 +1,13 @@
 <!doctype html>
 <!--
   Test page: plays the role of a customer's web app.
-  Open this file in a browser while print-agent is running (npm run tauri dev).
+  Open this file in a browser while the Taprel agent is running (npm run tauri dev).
   It talks to the agent with protocol v0 (docs/ARCHITECTURE.md).
 -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>print-agent test page</title>
+  <title>Taprel test page</title>
   <style>
     body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2em auto; padding: 0 1em; }
     button, select { font-size: 1em; padding: 0.4em 0.8em; margin: 0.2em 0; }
@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
-  <h1>print-agent test page</h1>
+  <h1>Taprel test page</h1>
   <p>Agent: <span id="status">not connected</span> <button id="connect">Connect</button></p>
   <p>
     <select id="printers"></select>
@@ -55,7 +55,7 @@
   <div id="log"></div>
 
   <script>
-    const AGENT_URL = "ws://127.0.0.1:17890";
+    const AGENT_URL = "ws://127.0.0.1:21873";
     const $ = (id) => document.getElementById(id);
 
     let ws = null;
